@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -62,6 +63,17 @@ class Categorie
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Livre", mappedBy="categorie")
+     */
+
+    private $livres;
+
+    public function __construct()
+    {
+        $this->livres = new ArrayCollection();
     }
 }
 

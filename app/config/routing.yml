@@ -5,6 +5,7 @@ app:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
-app_home:
-    path: /
-    defaults: { _controller: "AppBundle:Default:index"}
+#app_ajout:
+#    path:      /ajout
+#    defaults:
+#        _controller: AppBundle:Default:ajout
