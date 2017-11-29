@@ -5,6 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints\DateTime;
+use AppBundle\Entity\Categorie;
 
 /**
  * Livre
@@ -158,18 +159,17 @@ class Livre
         return $this->liv_dateParution;
     }
 
-    /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Categorie", inversedBy="livres")
-     * @ORM\JoinColumn(name="categorie_id", referencedColumnName="id")
-     */
-
-    private $categorie;
-
+//    /**
+//     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Categorie", inversedBy="livres")
+//     * @ORM\JoinColumn(name="categorie_id", referencedColumnName="id")
+//     */
+//
+//    private $categorie;
+//
     public function __construct()
     {
-        $date = new \DateTime();
-        $this->setLivDateParution($date);
-        $this->categorie = new ArrayCollection();
+        $this->setLivDateParution(date('d/m/Y'));
+//        $this->categorie = new ArrayCollection();
     }
 }
 

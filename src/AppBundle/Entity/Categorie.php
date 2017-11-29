@@ -65,15 +65,15 @@ class Categorie
         return $this->name;
     }
 
-    /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Livre", mappedBy="categorie")
-     */
-
-    private $livres;
-
-    public function __construct()
-    {
-        $this->livres = new ArrayCollection();
-    }
+//    /**
+//     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Livre", mappedBy="categorie")
+//     */
+//
+//    private $livres;
+//
+//    public function __construct()
+//    {
+//        $this->livres = new ArrayCollection();
+//    }
 }
 
